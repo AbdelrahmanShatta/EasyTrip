@@ -45,10 +45,6 @@ public:
             std::cerr << "Invalid index" << std::endl;
             return;
         }
-        if (index == 0) {
-            insertAtBeg(data);
-            return;
-        }
         Node<T>* temp = Head;
         for (int i = 0; temp != nullptr && i < index - 1; i++) {
             temp = temp->getNext();
@@ -57,8 +53,7 @@ public:
             std::cerr << "Index out of bounds" << std::endl;
             return;
         }
-        Node<T>* newNode = new Node<T>(data);
-        newNode->setNext(temp->getNext());
+
         temp->setNext(newNode);
     }
 
