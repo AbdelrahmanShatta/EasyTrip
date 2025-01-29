@@ -22,7 +22,7 @@ public:
 
     void insertAtBeg(T data) {
         Node<T>* newNode = new Node<T>(data);
-        newNode->setNext(Head);
+        
         Head = newNode;
     }
 
